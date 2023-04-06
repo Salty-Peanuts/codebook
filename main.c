@@ -1,18 +1,3 @@
-/////////////////////////////////////////////////////////////////////////////////////////
-// INTEGRITY STATEMENT (v4)
-//
-// By signing your name and ID below you are stating that you have agreed
-// to the online academic integrity statement posted on edX:
-// (Course > Assignments > Assignment Information & Policies > Academic Integrity Policy)
-/////////////////////////////////////////////////////////////////////////////////////////
-// I received help from and/or collaborated with:
-
-// None
-//
-// Name: Qinsong Zheng
-// login ID: j24zheng
-//////////////////////////////////////////////////////////////////////////////////////////
-
 // This program uses a "codebook" to convert from characters into words (or "codewords")
 
 // The first line must be one of: CODEBOOK=MORSE CODEBOOK=NATO or CODEBOOK=CUSTOM
@@ -56,7 +41,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "cs136-trace.h"
 #include "sos.h"
 #include "string-io.h"
 #include "nato.h"
@@ -111,8 +95,6 @@ char *codestring(const struct sos *codebook, const char *str) {
   const char *last = sos_item_at(codebook, '\0');
   if (strlen(last) == 0) {
     code_str = realloc(code_str, (len + 1) * sizeof(char));
-    //trace_msg("TRACING FIRST CONDITION!")
-    //trace_int(len);
     code_str[len - 1] = '\0';
   } else {
     for (int i = 0; last[i] != '\0'; ++i) {
@@ -124,15 +106,10 @@ char *codestring(const struct sos *codebook, const char *str) {
         ++len;
     }
     code_str = realloc(code_str, (len + 1) * sizeof(char));
-    //trace_msg("TRACING SECOND CONDITION!")
-    //trace_int(len);
     code_str[len] = '\0';
   }
   return code_str;
 }
-
-
-// you should not need to modify main()
 
 int main(void) {
   struct sos *codebook = NULL;
