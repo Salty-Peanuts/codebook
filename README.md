@@ -1,7 +1,7 @@
 # codebook
 !!! Only runs in Linux !!! (unfortunately)
 
-Copy the "codebook" program into desired location
+Copy the "codewords" program into desired location
 
 This program translates your input text file into according to preset codebook.
 
