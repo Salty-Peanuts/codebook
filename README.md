@@ -1,4 +1,6 @@
 # codebook
+!!! Only runs in Linux !!! (unfortunately)
+
 This program translates your input text file into according to preset codebook.
 
 To run program in bash/terminal (if in current directory):
